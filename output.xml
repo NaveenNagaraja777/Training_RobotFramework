@@ -1,181 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220712 13:04:17.117" rpa="false" schemaversion="3">
-<suite id="s1" name="FleekIt" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day7\FleekIt.robot">
-<test id="s1-t1" name="TC_03" line="15">
-<kw name="Keyword1">
-<kw name="Read Fleek ITXML Test Data" library="fleekIt">
-<var>${url}</var>
-<arg>url</arg>
-<msg timestamp="20220712 13:04:17.616" level="INFO">${url} = https://www.fleekitsolutions.com/</msg>
-<status status="PASS" starttime="20220712 13:04:17.611" endtime="20220712 13:04:17.616"/>
-</kw>
-<kw name="Read Fleek ITXML Test Data" library="fleekIt">
-<var>${browser}</var>
-<arg>browser</arg>
-<msg timestamp="20220712 13:04:17.617" level="INFO">${browser} = Chrome</msg>
-<status status="PASS" starttime="20220712 13:04:17.617" endtime="20220712 13:04:17.617"/>
-</kw>
-<kw name="Read Fleek ITXML Test Data" library="fleekIt">
-<var>${headerLinks}</var>
-<arg>headerLinks</arg>
-<msg timestamp="20220712 13:04:17.618" level="INFO">${headerLinks} = About,Services,Verticals,Portfolio,Blogs,Contact Us</msg>
-<status status="PASS" starttime="20220712 13:04:17.617" endtime="20220712 13:04:17.618"/>
-</kw>
-<kw name="Read Fleek ITXML Test Data" library="fleekIt">
-<var>${servicesLinks}</var>
-<arg>servicesLinks</arg>
-<msg timestamp="20220712 13:04:17.619" level="INFO">${servicesLinks} = Core QA Services,Test automation,Mobile app testing,Performance testing,Accessibility Testing,Design and Development,Digital Marketing</msg>
-<status status="PASS" starttime="20220712 13:04:17.618" endtime="20220712 13:04:17.620"/>
-</kw>
-<kw name="Read Fleek ITXML Test Data" library="fleekIt">
-<var>${contactUsURL}</var>
-<arg>contactUsURL</arg>
-<msg timestamp="20220712 13:04:17.621" level="INFO">${contactUsURL} = software-testing-agency-contact</msg>
-<status status="PASS" starttime="20220712 13:04:17.620" endtime="20220712 13:04:17.621"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${url}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220712 13:04:17.622" level="INFO">${url} = https://www.fleekitsolutions.com/</msg>
-<status status="PASS" starttime="20220712 13:04:17.621" endtime="20220712 13:04:17.622"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${browser}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220712 13:04:17.623" level="INFO">${browser} = Chrome</msg>
-<status status="PASS" starttime="20220712 13:04:17.623" endtime="20220712 13:04:17.623"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${headerLinks}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220712 13:04:17.624" level="INFO">${headerLinks} = About,Services,Verticals,Portfolio,Blogs,Contact Us</msg>
-<status status="PASS" starttime="20220712 13:04:17.623" endtime="20220712 13:04:17.624"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${servicesLinks}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220712 13:04:17.624" level="INFO">${servicesLinks} = Core QA Services,Test automation,Mobile app testing,Performance testing,Accessibility Testing,Design and Development,Digital Marketing</msg>
-<status status="PASS" starttime="20220712 13:04:17.624" endtime="20220712 13:04:17.624"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${contactUsURL}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220712 13:04:17.625" level="INFO">${contactUsURL} = software-testing-agency-contact</msg>
-<status status="PASS" starttime="20220712 13:04:17.624" endtime="20220712 13:04:17.625"/>
-</kw>
-<status status="PASS" starttime="20220712 13:04:17.610" endtime="20220712 13:04:17.625"/>
-</kw>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220713 11:34:19.382" rpa="false" schemaversion="3">
+<suite id="s1" name="CheckBox" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\CheckBox.robot">
+<test id="s1-t1" name="TC:01" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://the-internet.herokuapp.com/checkboxes</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220712 13:04:17.626" level="INFO">Opening browser 'Chrome' to base url 'https://www.fleekitsolutions.com/'.</msg>
-<status status="PASS" starttime="20220712 13:04:17.625" endtime="20220712 13:04:23.250"/>
+<msg timestamp="20220713 11:34:19.898" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220713 11:34:19.898" endtime="20220713 11:34:28.214"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220712 13:04:23.251" endtime="20220712 13:04:23.498"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220712 13:04:25.511" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220712 13:04:23.502" endtime="20220712 13:04:25.512"/>
+<status status="PASS" starttime="20220713 11:34:28.215" endtime="20220713 11:34:28.354"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//h2[text()='CLIENT SAYS']</arg>
+<arg>//h3[text()='Checkboxes']</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220712 13:04:25.521" endtime="20220712 13:04:25.543"/>
+<status status="PASS" starttime="20220713 11:34:28.355" endtime="20220713 11:34:28.368"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>//a[@class='flex-next']</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220712 13:04:25.544" endtime="20220712 13:04:25.873"/>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.369" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is not selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.369" endtime="20220713 11:34:28.422"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${current}</var>
-<arg>//li[@class='testimonial_content flex-active-slide']//p/span[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:25.936" level="INFO">${current} = https://digitalbureau.com/</msg>
-<status status="PASS" starttime="20220712 13:04:25.873" endtime="20220712 13:04:25.937"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${current}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 13:04:25.937" endtime="20220712 13:04:25.938"/>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.423" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.423" endtime="20220713 11:34:28.468"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[@class='flex-next']</arg>
+<arg>(//input[@type='checkbox'])[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:25.939" level="INFO">Clicking element '//a[@class='flex-next']'.</msg>
-<status status="PASS" starttime="20220712 13:04:25.939" endtime="20220712 13:04:26.047"/>
+<msg timestamp="20220713 11:34:28.470" level="INFO">Clicking element '(//input[@type='checkbox'])[1]'.</msg>
+<status status="PASS" starttime="20220713 11:34:28.469" endtime="20220713 11:34:28.535"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${next}</var>
-<arg>//li[@class='testimonial_content flex-active-slide']//p/span[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:26.106" level="INFO">${next} = </msg>
-<status status="PASS" starttime="20220712 13:04:26.055" endtime="20220712 13:04:26.106"/>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.536" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.535" endtime="20220713 11:34:28.573"/>
 </kw>
-<kw name="Should Not Be Equal" library="BuiltIn">
-<arg>"""${current}"""</arg>
-<arg>"""${next}"""</arg>
-<doc>Fails if the given objects are equal.</doc>
-<status status="PASS" starttime="20220712 13:04:26.107" endtime="20220712 13:04:26.108"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>//a[@class='flex-prev']</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220712 13:04:26.108" endtime="20220712 13:04:26.452"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${current}</var>
-<arg>//li[@class='testimonial_content flex-active-slide']//p/span[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:26.475" level="INFO">${current} = ignite.online</msg>
-<status status="PASS" starttime="20220712 13:04:26.452" endtime="20220712 13:04:26.476"/>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.573" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.573" endtime="20220713 11:34:28.610"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[@class='flex-prev']</arg>
+<arg>(//input[@type='checkbox'])[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:26.476" level="INFO">Clicking element '//a[@class='flex-prev']'.</msg>
-<status status="PASS" starttime="20220712 13:04:26.476" endtime="20220712 13:04:26.536"/>
+<msg timestamp="20220713 11:34:28.611" level="INFO">Clicking element '(//input[@type='checkbox'])[2]'.</msg>
+<status status="PASS" starttime="20220713 11:34:28.610" endtime="20220713 11:34:28.669"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${prev}</var>
-<arg>//li[@class='testimonial_content flex-active-slide']//p/span[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220712 13:04:26.561" level="INFO">${prev} = </msg>
-<status status="PASS" starttime="20220712 13:04:26.537" endtime="20220712 13:04:26.561"/>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.670" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is not selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.670" endtime="20220713 11:34:28.699"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>"""${current}"""</arg>
-<arg>"""${prev}"""</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<msg timestamp="20220712 13:04:26.564" level="FAIL">"""ignite.online""" != """"""</msg>
-<status status="FAIL" starttime="20220712 13:04:26.562" endtime="20220712 13:04:26.565"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220712 13:04:26.566" endtime="20220712 13:04:26.566"/>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 11:34:28.699" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 11:34:28.699" endtime="20220713 11:34:28.728"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="NOT RUN" starttime="20220712 13:04:26.567" endtime="20220712 13:04:26.567"/>
+<status status="PASS" starttime="20220713 11:34:28.728" endtime="20220713 11:34:31.095"/>
 </kw>
-<status status="FAIL" starttime="20220712 13:04:17.609" endtime="20220712 13:04:26.568">"""ignite.online""" != """"""</status>
+<status status="PASS" starttime="20220713 11:34:19.897" endtime="20220713 11:34:31.104"/>
 </test>
-<status status="FAIL" starttime="20220712 13:04:17.120" endtime="20220712 13:04:26.570"/>
+<status status="PASS" starttime="20220713 11:34:19.386" endtime="20220713 11:34:31.125"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="FleekIt">FleekIt</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CheckBox">CheckBox</stat>
 </suite>
 </statistics>
 <errors>
