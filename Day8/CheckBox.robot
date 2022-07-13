@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 
-TC:01
+TC_Validate_CheckBox:01
         Open Browser        https://the-internet.herokuapp.com/checkboxes       Chrome
         Maximize Browser Window
 
