@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220712 09:21:38.252" rpa="false" schemaversion="3">
+<suite id="s1" name="RunByTag &amp; RunByTag S1">
+<suite id="s1-s1" name="RunByTag" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day6\RunByTag.robot">
+<test id="s1-s1-t1" name="Google_Home_Page1" line="6">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.304" endtime="20220712 09:21:38.305"/>
+</kw>
+<doc>As a user, I am validating Google URL1, buttons1, textboxes1, links1</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.301" endtime="20220712 09:21:38.305"/>
+</test>
+<test id="s1-s1-t2" name="Google_Home_Page4" line="21">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.308" endtime="20220712 09:21:38.308"/>
+</kw>
+<doc>As a user, I am validating Google URL4, buttons4, textboxes4, links4</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.307" endtime="20220712 09:21:38.309"/>
+</test>
+<test id="s1-s1-t3" name="Google_Home_Page7" line="36">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 7</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.312" endtime="20220712 09:21:38.312"/>
+</kw>
+<doc>As a user, I am validating Google URL7, buttons7, textboxes7, links7</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.311" endtime="20220712 09:21:38.313"/>
+</test>
+<status status="PASS" starttime="20220712 09:21:38.295" endtime="20220712 09:21:38.316"/>
+</suite>
+<suite id="s1-s2" name="RunByTag S1" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day6\RunByTag_S1.robot">
+<test id="s1-s2-t1" name="Google_Home_Page1" line="6">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.324" endtime="20220712 09:21:38.325"/>
+</kw>
+<doc>As a user, I am validating Google URL1, buttons1, textboxes1, links1</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.323" endtime="20220712 09:21:38.325"/>
+</test>
+<test id="s1-s2-t2" name="Google_Home_Page4" line="21">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.328" endtime="20220712 09:21:38.329"/>
+</kw>
+<doc>As a user, I am validating Google URL4, buttons4, textboxes4, links4</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.327" endtime="20220712 09:21:38.329"/>
+</test>
+<test id="s1-s2-t3" name="Google_Home_Page7" line="36">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is smoke test case 7</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:21:38.333" endtime="20220712 09:21:38.334"/>
+</kw>
+<doc>As a user, I am validating Google URL7, buttons7, textboxes7, links7</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220712 09:21:38.331" endtime="20220712 09:21:38.334"/>
+</test>
+<status status="PASS" starttime="20220712 09:21:38.318" endtime="20220712 09:21:38.336"/>
+</suite>
+<status status="PASS" starttime="20220712 09:21:38.255" endtime="20220712 09:21:38.338"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="RunByTag &amp; RunByTag S1">RunByTag &amp; RunByTag S1</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="RunByTag">RunByTag &amp; RunByTag S1.RunByTag</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="RunByTag S1">RunByTag &amp; RunByTag S1.RunByTag S1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

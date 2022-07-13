@@ -1,0 +1,13 @@
+<fleekIT>
+    <url>https://www.fleekitsolutions.com/</url>
+    <browser>Chrome</browser>
+    <headerLinks>About,Services,Verticals,Portfolio,Blogs,Contact Us</headerLinks>
+    <servicesLinks>Core QA Services,Test automation,Mobile app testing,Performance testing,Accessibility Testing,Design and Development,Digital Marketing</servicesLinks>
+    <contactUsURL>software-testing-agency-contact</contactUsURL>
+    <firstName>Naveen</firstName>
+    <lastName>Kumar</lastName>
+    <email>email@arisglobal.com</email>
+    <phone>1234</phone>
+    <subject>Robot Framework</subject>
+    <message>Message123</message>
+</fleekIT>
