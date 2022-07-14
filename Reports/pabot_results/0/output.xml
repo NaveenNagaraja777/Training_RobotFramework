@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220713 16:18:54.069" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CheckBox" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\CheckBox.robot">
+<test id="s1-s1-t1" name="SS:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/checkboxes</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:18:54.648" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:07.151"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:07.152" endtime="20220713 16:19:07.280"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//h3[text()='Checkboxes']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220713 16:19:07.280" endtime="20220713 16:19:07.286"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.286" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.286" endtime="20220713 16:19:07.351"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.351" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.351" endtime="20220713 16:19:07.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:07.396" level="INFO">Clicking element '(//input[@type='checkbox'])[1]'.</msg>
+<status status="PASS" starttime="20220713 16:19:07.396" endtime="20220713 16:19:07.468"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.470" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.469" endtime="20220713 16:19:07.501"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.502" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.501" endtime="20220713 16:19:07.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:07.518" level="INFO">Clicking element '(//input[@type='checkbox'])[2]'.</msg>
+<status status="PASS" starttime="20220713 16:19:07.518" endtime="20220713 16:19:07.582"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.583" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.582" endtime="20220713 16:19:07.612"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.613" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.613" endtime="20220713 16:19:07.635"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:07.635" endtime="20220713 16:19:09.939"/>
+</kw>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:09.939"/>
+</test>
+<status status="PASS" starttime="20220713 16:18:54.131" endtime="20220713 16:19:09.939"/>
+</suite>
+<status status="PASS" starttime="20220713 16:18:54.084" endtime="20220713 16:19:09.939"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="CheckBox">Suites.CheckBox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

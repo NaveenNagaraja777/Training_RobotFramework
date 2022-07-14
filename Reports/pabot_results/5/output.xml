@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220713 16:19:33.869" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="UploadFileInRobot" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\UploadFileInRobot.robot">
+<test id="s1-s1-t1" name="SS:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/upload</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:34.286" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/upload'.</msg>
+<status status="PASS" starttime="20220713 16:19:34.286" endtime="20220713 16:19:47.540"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:47.541" endtime="20220713 16:19:47.680"/>
+</kw>
+<kw name="My Image Path" library="Reusable">
+<var>${fileName}</var>
+<arg>selenium-screenshot-1.png</arg>
+<msg timestamp="20220713 16:19:47.680" level="INFO">${fileName} = D:\PythonExcersiseFiles\Day1PythonProgramming/selenium-screenshot-1.png</msg>
+<status status="PASS" starttime="20220713 16:19:47.680" endtime="20220713 16:19:47.680"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>file-upload</arg>
+<arg>${fileName}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220713 16:19:47.680" level="INFO">Sending D:\PythonExcersiseFiles\Day1PythonProgramming\selenium-screenshot-1.png to browser.</msg>
+<status status="PASS" starttime="20220713 16:19:47.680" endtime="20220713 16:19:47.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220713 16:19:49.739" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220713 16:19:47.735" endtime="20220713 16:19:49.739"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:49.739" endtime="20220713 16:19:52.159"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:34.286" endtime="20220713 16:19:52.159"/>
+</test>
+<status status="PASS" starttime="20220713 16:19:33.931" endtime="20220713 16:19:52.159"/>
+</suite>
+<status status="PASS" starttime="20220713 16:19:33.900" endtime="20220713 16:19:52.166"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="UploadFileInRobot">Suites.UploadFileInRobot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
