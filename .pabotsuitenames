@@ -1,0 +1,10 @@
+datasources:3a27bdb75332d48a4ea1cd57bd566135a727f51e
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:b1855a627cc6289375d73510021aff61c82c9d18
+--suite Suites.CheckBox
+--suite Suites.HTMLTable
+--suite Suites.RadioButton
+--suite Suites.SetUpAndTearDownBrowsers
+--suite Suites.TestSuiteSetup
+--suite Suites.UploadFileInRobot

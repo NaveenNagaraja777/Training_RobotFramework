@@ -1,85 +1,2088 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220712 09:21:38.252" rpa="false" schemaversion="3">
-<suite id="s1" name="RunByTag &amp; RunByTag S1">
-<suite id="s1-s1" name="RunByTag" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day6\RunByTag.robot">
-<test id="s1-s1-t1" name="Google_Home_Page1" line="6">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 1</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.304" endtime="20220712 09:21:38.305"/>
+<robot generator="Rebot 5.0.1 (Python 3.9.6 on win32)" generated="20220713 16:19:52.544" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CheckBox" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\CheckBox.robot">
+<test id="s1-s1-t1" name="SS:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/checkboxes</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:18:54.648" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:07.151"/>
 </kw>
-<doc>As a user, I am validating Google URL1, buttons1, textboxes1, links1</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.301" endtime="20220712 09:21:38.305"/>
-</test>
-<test id="s1-s1-t2" name="Google_Home_Page4" line="21">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 4</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.308" endtime="20220712 09:21:38.308"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:07.152" endtime="20220713 16:19:07.280"/>
 </kw>
-<doc>As a user, I am validating Google URL4, buttons4, textboxes4, links4</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.307" endtime="20220712 09:21:38.309"/>
-</test>
-<test id="s1-s1-t3" name="Google_Home_Page7" line="36">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 7</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.312" endtime="20220712 09:21:38.312"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//h3[text()='Checkboxes']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220713 16:19:07.280" endtime="20220713 16:19:07.286"/>
 </kw>
-<doc>As a user, I am validating Google URL7, buttons7, textboxes7, links7</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.311" endtime="20220712 09:21:38.313"/>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.286" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.286" endtime="20220713 16:19:07.351"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.351" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.351" endtime="20220713 16:19:07.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:07.396" level="INFO">Clicking element '(//input[@type='checkbox'])[1]'.</msg>
+<status status="PASS" starttime="20220713 16:19:07.396" endtime="20220713 16:19:07.468"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.470" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.469" endtime="20220713 16:19:07.501"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.502" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.501" endtime="20220713 16:19:07.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:07.518" level="INFO">Clicking element '(//input[@type='checkbox'])[2]'.</msg>
+<status status="PASS" starttime="20220713 16:19:07.518" endtime="20220713 16:19:07.582"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.583" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.582" endtime="20220713 16:19:07.612"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:07.613" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:07.613" endtime="20220713 16:19:07.635"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:07.635" endtime="20220713 16:19:09.939"/>
+</kw>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:09.939"/>
 </test>
-<status status="PASS" starttime="20220712 09:21:38.295" endtime="20220712 09:21:38.316"/>
+<status status="PASS" starttime="20220713 16:18:54.131" endtime="20220713 16:19:09.939"/>
 </suite>
-<suite id="s1-s2" name="RunByTag S1" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day6\RunByTag_S1.robot">
-<test id="s1-s2-t1" name="Google_Home_Page1" line="6">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 1</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.324" endtime="20220712 09:21:38.325"/>
+<suite id="s1-s2" name="HTMLTable" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\HTMLTable.robot">
+<test id="s1-s2-t1" name="SS:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:18:54.648" level="INFO">Opening browser 'Chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:05.157"/>
 </kw>
-<doc>As a user, I am validating Google URL1, buttons1, textboxes1, links1</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.323" endtime="20220712 09:21:38.325"/>
-</test>
-<test id="s1-s2-t2" name="Google_Home_Page4" line="21">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 4</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.328" endtime="20220712 09:21:38.329"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:05.158" endtime="20220713 16:19:05.289"/>
 </kw>
-<doc>As a user, I am validating Google URL4, buttons4, textboxes4, links4</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.327" endtime="20220712 09:21:38.329"/>
-</test>
-<test id="s1-s2-t3" name="Google_Home_Page7" line="36">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is smoke test case 7</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220712 09:21:38.333" endtime="20220712 09:21:38.334"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${tableRow}</var>
+<arg>//table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.307" level="INFO">${tableRow} = 7</msg>
+<status status="PASS" starttime="20220713 16:19:05.289" endtime="20220713 16:19:05.307"/>
 </kw>
-<doc>As a user, I am validating Google URL7, buttons7, textboxes7, links7</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20220712 09:21:38.331" endtime="20220712 09:21:38.334"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableRow}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.307" endtime="20220713 16:19:05.310"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${tableColumn}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.322" level="INFO">${tableColumn} = 4</msg>
+<status status="PASS" starttime="20220713 16:19:05.310" endtime="20220713 16:19:05.322"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableColumn}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.323" endtime="20220713 16:19:05.325"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${tableData1}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.355" level="INFO">${tableData1} = BookName</msg>
+<status status="PASS" starttime="20220713 16:19:05.325" endtime="20220713 16:19:05.355"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableData1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.355" endtime="20220713 16:19:05.356"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${tableData2}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.398" level="INFO">${tableData2} = Author</msg>
+<status status="PASS" starttime="20220713 16:19:05.357" endtime="20220713 16:19:05.398"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableData2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.398" endtime="20220713 16:19:05.399"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${tableData3}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.431" level="INFO">${tableData3} = Subject</msg>
+<status status="PASS" starttime="20220713 16:19:05.399" endtime="20220713 16:19:05.431"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableData3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.432" endtime="20220713 16:19:05.432"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${tableData4}</var>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:05.467" level="INFO">${tableData4} = Price</msg>
+<status status="PASS" starttime="20220713 16:19:05.432" endtime="20220713 16:19:05.467"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tableData4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:05.467" endtime="20220713 16:19:05.468"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>4</arg>
+<arg>2000</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.468" endtime="20220713 16:19:05.647"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>1</arg>
+<arg>Learn Java</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.647" endtime="20220713 16:19:05.738"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>Amit</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.738" endtime="20220713 16:19:05.813"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>3</arg>
+<arg>Java</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.814" endtime="20220713 16:19:05.898"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>300</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.898" endtime="20220713 16:19:05.963"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>5</arg>
+<arg>Mukesh</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:05.963" endtime="20220713 16:19:06.028"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:06.028" endtime="20220713 16:19:06.108"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>3</arg>
+<arg>Java</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:06.109" endtime="20220713 16:19:06.153"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>500</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220713 16:19:06.231" level="INFO">Table cell contains '500'.</msg>
+<status status="PASS" starttime="20220713 16:19:06.153" endtime="20220713 16:19:06.232"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>//table[@name='BookTable']</arg>
+<arg>Author</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20220713 16:19:06.232" endtime="20220713 16:19:06.288"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:06.288" endtime="20220713 16:19:08.620"/>
+</kw>
+<status status="PASS" starttime="20220713 16:18:54.648" endtime="20220713 16:19:08.620"/>
 </test>
-<status status="PASS" starttime="20220712 09:21:38.318" endtime="20220712 09:21:38.336"/>
+<status status="PASS" starttime="20220713 16:18:54.131" endtime="20220713 16:19:08.620"/>
 </suite>
-<status status="PASS" starttime="20220712 09:21:38.255" endtime="20220712 09:21:38.338"/>
+<suite id="s1-s3" name="RadioButton" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\RadioButton.robot">
+<test id="s1-s3-t1" name="Radio_Button:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/checkboxes</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:10.071" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220713 16:19:10.071" endtime="20220713 16:19:19.092"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:19.093" endtime="20220713 16:19:19.276"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//h3[text()='Checkboxes']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220713 16:19:19.276" endtime="20220713 16:19:19.298"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.301" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.299" endtime="20220713 16:19:19.350"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.352" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.352" endtime="20220713 16:19:19.401"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:19.402" level="INFO">Clicking element '(//input[@type='checkbox'])[1]'.</msg>
+<status status="PASS" starttime="20220713 16:19:19.401" endtime="20220713 16:19:19.469"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.470" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.470" endtime="20220713 16:19:19.505"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.505" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.505" endtime="20220713 16:19:19.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:19.535" level="INFO">Clicking element '(//input[@type='checkbox'])[2]'.</msg>
+<status status="PASS" starttime="20220713 16:19:19.534" endtime="20220713 16:19:19.589"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[2]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.590" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[2]' is not selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.589" endtime="20220713 16:19:19.622"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>(//input[@type='checkbox'])[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220713 16:19:19.623" level="INFO">Verifying checkbox '(//input[@type='checkbox'])[1]' is selected.</msg>
+<status status="PASS" starttime="20220713 16:19:19.623" endtime="20220713 16:19:19.653"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:19.653" endtime="20220713 16:19:22.005"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:10.071" endtime="20220713 16:19:22.005"/>
+</test>
+<status status="PASS" starttime="20220713 16:19:09.670" endtime="20220713 16:19:22.005"/>
+</suite>
+<suite id="s1-s4" name="SetUpAndTearDownBrowsers" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\SetUpAndTearDownBrowsers.robot">
+<test id="s1-s4-t1" name="Print_All_Links_TC_01" line="9">
+<kw name="LaunchBrowser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://techedtrainings.com/contact/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:12.639" level="INFO">Opening browser 'Chrome' to base url 'https://techedtrainings.com/contact/'.</msg>
+<status status="PASS" starttime="20220713 16:19:12.638" endtime="20220713 16:19:20.027"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:20.027" endtime="20220713 16:19:20.250"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:12.636" endtime="20220713 16:19:20.252"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${allLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.272" level="INFO">${allLinks} = 27</msg>
+<status status="PASS" starttime="20220713 16:19:20.252" endtime="20220713 16:19:20.272"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${allLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.272" endtime="20220713 16:19:20.272"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${allLinks}==27</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.272" endtime="20220713 16:19:20.272"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${printLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.290" level="INFO">${printLinks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="e7820f5e-2681-492b-9796-534798f7596f")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220713 16:19:20.272" endtime="20220713 16:19:20.290"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{printLinks}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="e7820f5e-2681-492b-9796-534798f7596f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.292" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="e7820f5e-2681-492b-9796-534798f7596f")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.292" endtime="20220713 16:19:20.292"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.312" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.292" endtime="20220713 16:19:20.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.312" endtime="20220713 16:19:20.312"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.312" endtime="20220713 16:19:20.320"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.292" endtime="20220713 16:19:20.320"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="f887123b-8716-4333-84a2-738283443335")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.320" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="f887123b-8716-4333-84a2-738283443335")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.320" endtime="20220713 16:19:20.322"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.341" level="INFO">${myRunTimeLinks} = HOME</msg>
+<status status="PASS" starttime="20220713 16:19:20.322" endtime="20220713 16:19:20.341"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.341" endtime="20220713 16:19:20.343"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.343" endtime="20220713 16:19:20.343"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.320" endtime="20220713 16:19:20.343"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="182be468-ac9c-485c-a0d3-c0388eda48e9")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.343" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="182be468-ac9c-485c-a0d3-c0388eda48e9")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.343" endtime="20220713 16:19:20.343"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.363" level="INFO">${myRunTimeLinks} = COURSES</msg>
+<status status="PASS" starttime="20220713 16:19:20.343" endtime="20220713 16:19:20.363"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.363" endtime="20220713 16:19:20.363"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.363" endtime="20220713 16:19:20.363"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.343" endtime="20220713 16:19:20.363"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="cf9d7cc0-16bb-476e-afd8-bbcf117238c7")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.363" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="cf9d7cc0-16bb-476e-afd8-bbcf117238c7")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.363" endtime="20220713 16:19:20.363"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.383" level="INFO">${myRunTimeLinks} = CORPORATE TRAINING</msg>
+<status status="PASS" starttime="20220713 16:19:20.363" endtime="20220713 16:19:20.383"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.383" endtime="20220713 16:19:20.383"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.383" endtime="20220713 16:19:20.383"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.363" endtime="20220713 16:19:20.383"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="92651535-4f28-41d4-b15d-2429b578ab57")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.383" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="92651535-4f28-41d4-b15d-2429b578ab57")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.383" endtime="20220713 16:19:20.383"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.401" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.383" endtime="20220713 16:19:20.401"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.401" endtime="20220713 16:19:20.401"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.401" endtime="20220713 16:19:20.411"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.383" endtime="20220713 16:19:20.411"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="9c72c827-8bcd-4a18-83b1-fdd7032b2880")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.415" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="9c72c827-8bcd-4a18-83b1-fdd7032b2880")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.414" endtime="20220713 16:19:20.415"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.430" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.416" endtime="20220713 16:19:20.431"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.432" endtime="20220713 16:19:20.433"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.434" endtime="20220713 16:19:20.435"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.413" endtime="20220713 16:19:20.435"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="7fec4002-4d8a-4c19-9a52-2fc2498dcc91")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.436" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="7fec4002-4d8a-4c19-9a52-2fc2498dcc91")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.435" endtime="20220713 16:19:20.436"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.454" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.436" endtime="20220713 16:19:20.454"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.454" endtime="20220713 16:19:20.455"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.455" endtime="20220713 16:19:20.456"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.435" endtime="20220713 16:19:20.456"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="9f774934-984e-4a10-b528-c661f3ca7181")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.457" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="9f774934-984e-4a10-b528-c661f3ca7181")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.457" endtime="20220713 16:19:20.457"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.463" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.458" endtime="20220713 16:19:20.463"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.463" endtime="20220713 16:19:20.463"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.463" endtime="20220713 16:19:20.463"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.456" endtime="20220713 16:19:20.463"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="e1ca894f-a713-427b-a03d-af45d9fa82bf")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.463" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="e1ca894f-a713-427b-a03d-af45d9fa82bf")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.463" endtime="20220713 16:19:20.463"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.478" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.463" endtime="20220713 16:19:20.478"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.478" endtime="20220713 16:19:20.494"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.494" endtime="20220713 16:19:20.494"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.463" endtime="20220713 16:19:20.494"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="2e059b40-237f-46a8-9617-58e22ace036a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.494" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="2e059b40-237f-46a8-9617-58e22ace036a")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.494" endtime="20220713 16:19:20.494"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.510" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.494" endtime="20220713 16:19:20.510"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.510" endtime="20220713 16:19:20.510"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.510" endtime="20220713 16:19:20.510"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.494" endtime="20220713 16:19:20.510"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="c7eae4a0-4deb-4c0a-91e4-972e4c165c7a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.510" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="c7eae4a0-4deb-4c0a-91e4-972e4c165c7a")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.510" endtime="20220713 16:19:20.510"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.525" level="INFO">${myRunTimeLinks} = ABOUT</msg>
+<status status="PASS" starttime="20220713 16:19:20.510" endtime="20220713 16:19:20.525"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.525" endtime="20220713 16:19:20.531"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.531" endtime="20220713 16:19:20.531"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.510" endtime="20220713 16:19:20.531"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="353a7185-00ea-42a0-998d-14eb642b39e1")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.531" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="353a7185-00ea-42a0-998d-14eb642b39e1")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.531" endtime="20220713 16:19:20.531"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.547" level="INFO">${myRunTimeLinks} = CONTACT</msg>
+<status status="PASS" starttime="20220713 16:19:20.531" endtime="20220713 16:19:20.547"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.547" endtime="20220713 16:19:20.547"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.547" endtime="20220713 16:19:20.547"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.531" endtime="20220713 16:19:20.547"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="72ae2cb2-a1c5-45e8-9a48-dc4ec3b5465a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.547" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="72ae2cb2-a1c5-45e8-9a48-dc4ec3b5465a")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.547" endtime="20220713 16:19:20.547"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.562" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:20.547" endtime="20220713 16:19:20.562"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.578" endtime="20220713 16:19:20.578"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:20.578" endtime="20220713 16:19:20.578"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.547" endtime="20220713 16:19:20.578"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="d594661b-361b-40d8-99d1-9b9968190251")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:20.578" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="b0f016b5e3df8b99831ef4e082ee96ec", element="d594661b-361b-40d8-99d1-9b9968190251")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:20.578" endtime="20220713 16:19:20.578"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:20.594" level="INFO">${myRunTimeLinks} = Home</msg>
+<status status="PASS" starttime="20220713 16:19:20.578" endtime="20220713 16:19:20.594"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:20.594" endtime="20220713 16:19:20.594"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220713 16:19:20.594" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220713 16:19:20.594" endtime="20220713 16:19:20.594"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.578" endtime="20220713 16:19:20.594"/>
+</iter>
+<status status="PASS" starttime="20220713 16:19:20.290" endtime="20220713 16:19:20.594"/>
+</for>
+<kw name="CloseBrowser" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:20.594" endtime="20220713 16:19:22.923"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:20.594" endtime="20220713 16:19:22.923"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:12.630" endtime="20220713 16:19:22.923"/>
+</test>
+<test id="s1-s4-t2" name="Print_All_Links_TC_02" line="29">
+<kw name="LaunchBrowser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://techedtrainings.com/contact/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:22.923" level="INFO">Opening browser 'Chrome' to base url 'https://techedtrainings.com/contact/'.</msg>
+<status status="PASS" starttime="20220713 16:19:22.923" endtime="20220713 16:19:31.039"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:31.039" endtime="20220713 16:19:31.212"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:22.923" endtime="20220713 16:19:31.212"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${allLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.243" level="INFO">${allLinks} = 27</msg>
+<status status="PASS" starttime="20220713 16:19:31.212" endtime="20220713 16:19:31.243"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${allLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.243" endtime="20220713 16:19:31.243"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${allLinks}==27</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.243" endtime="20220713 16:19:31.243"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${printLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.259" level="INFO">${printLinks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="754c8757-d7a2-4cfd-bbdb-39dd9724ba74")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220713 16:19:31.243" endtime="20220713 16:19:31.259"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{printLinks}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="754c8757-d7a2-4cfd-bbdb-39dd9724ba74")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.259" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="754c8757-d7a2-4cfd-bbdb-39dd9724ba74")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.259" endtime="20220713 16:19:31.259"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.281" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.259" endtime="20220713 16:19:31.281"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.281" endtime="20220713 16:19:31.281"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.281" endtime="20220713 16:19:31.297"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.259" endtime="20220713 16:19:31.297"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="dba7ed7b-7ccf-448f-ad46-f26ae012b453")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.297" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="dba7ed7b-7ccf-448f-ad46-f26ae012b453")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.297" endtime="20220713 16:19:31.297"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.312" level="INFO">${myRunTimeLinks} = HOME</msg>
+<status status="PASS" starttime="20220713 16:19:31.297" endtime="20220713 16:19:31.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.312" endtime="20220713 16:19:31.312"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.312" endtime="20220713 16:19:31.312"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.297" endtime="20220713 16:19:31.312"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="d4ab799a-5829-4040-96ad-a3a9a603b012")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.312" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="d4ab799a-5829-4040-96ad-a3a9a603b012")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.312" endtime="20220713 16:19:31.312"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.328" level="INFO">${myRunTimeLinks} = COURSES</msg>
+<status status="PASS" starttime="20220713 16:19:31.312" endtime="20220713 16:19:31.328"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.328" endtime="20220713 16:19:31.328"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.328" endtime="20220713 16:19:31.328"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.312" endtime="20220713 16:19:31.328"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="644c955c-a337-47ba-ba5b-1e0b1199f60a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.343" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="644c955c-a337-47ba-ba5b-1e0b1199f60a")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.343" endtime="20220713 16:19:31.343"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.362" level="INFO">${myRunTimeLinks} = CORPORATE TRAINING</msg>
+<status status="PASS" starttime="20220713 16:19:31.343" endtime="20220713 16:19:31.362"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.362" endtime="20220713 16:19:31.362"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.362" endtime="20220713 16:19:31.362"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.328" endtime="20220713 16:19:31.362"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="1147be86-5ab4-4800-814e-8d26e25e52c0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.362" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="1147be86-5ab4-4800-814e-8d26e25e52c0")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.362" endtime="20220713 16:19:31.362"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.392" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.362" endtime="20220713 16:19:31.392"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.393" endtime="20220713 16:19:31.395"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.396" endtime="20220713 16:19:31.398"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.362" endtime="20220713 16:19:31.398"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="1be70286-53c1-475d-b4fe-509fa058195e")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.399" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="1be70286-53c1-475d-b4fe-509fa058195e")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.399" endtime="20220713 16:19:31.399"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.414" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.400" endtime="20220713 16:19:31.414"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.415" endtime="20220713 16:19:31.415"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.415" endtime="20220713 16:19:31.416"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.398" endtime="20220713 16:19:31.416"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="d67b1a49-58b5-491e-945e-cc2fd187849f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.417" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="d67b1a49-58b5-491e-945e-cc2fd187849f")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.417" endtime="20220713 16:19:31.417"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.428" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.417" endtime="20220713 16:19:31.428"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.428" endtime="20220713 16:19:31.428"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.428" endtime="20220713 16:19:31.428"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.416" endtime="20220713 16:19:31.428"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="dfe17a41-d401-4f84-aff1-cb93ae2034b7")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.428" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="dfe17a41-d401-4f84-aff1-cb93ae2034b7")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.428" endtime="20220713 16:19:31.428"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.443" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.428" endtime="20220713 16:19:31.443"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.443" endtime="20220713 16:19:31.443"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.443" endtime="20220713 16:19:31.443"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.428" endtime="20220713 16:19:31.443"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="0bb02e61-88a7-4b97-bc4d-464225ff5cda")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.443" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="0bb02e61-88a7-4b97-bc4d-464225ff5cda")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.443" endtime="20220713 16:19:31.443"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.459" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.443" endtime="20220713 16:19:31.459"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.459" endtime="20220713 16:19:31.459"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.459" endtime="20220713 16:19:31.459"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.443" endtime="20220713 16:19:31.459"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="2c217dd2-2d60-4dcf-bc01-b92c54c090ef")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.459" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="2c217dd2-2d60-4dcf-bc01-b92c54c090ef")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.459" endtime="20220713 16:19:31.459"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.484" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.459" endtime="20220713 16:19:31.485"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.485" endtime="20220713 16:19:31.486"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.486" endtime="20220713 16:19:31.487"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.459" endtime="20220713 16:19:31.487"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="b65543c3-a04a-47d0-a00c-498e23c9fcc6")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.488" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="b65543c3-a04a-47d0-a00c-498e23c9fcc6")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.488" endtime="20220713 16:19:31.488"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.507" level="INFO">${myRunTimeLinks} = ABOUT</msg>
+<status status="PASS" starttime="20220713 16:19:31.488" endtime="20220713 16:19:31.508"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.508" endtime="20220713 16:19:31.508"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.509" endtime="20220713 16:19:31.510"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.487" endtime="20220713 16:19:31.510"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="aac67272-1991-47b9-adc1-410b0b60d362")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.510" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="aac67272-1991-47b9-adc1-410b0b60d362")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.510" endtime="20220713 16:19:31.510"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.525" level="INFO">${myRunTimeLinks} = CONTACT</msg>
+<status status="PASS" starttime="20220713 16:19:31.510" endtime="20220713 16:19:31.525"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.525" endtime="20220713 16:19:31.525"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.525" endtime="20220713 16:19:31.525"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.510" endtime="20220713 16:19:31.525"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="33e2af80-5331-4b6e-91ce-1af9717f9831")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.525" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="33e2af80-5331-4b6e-91ce-1af9717f9831")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.525" endtime="20220713 16:19:31.525"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.541" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:31.525" endtime="20220713 16:19:31.541"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.541" endtime="20220713 16:19:31.541"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:31.541" endtime="20220713 16:19:31.541"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.525" endtime="20220713 16:19:31.541"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="371a5d63-db11-4dfe-befb-0fef5c089af2")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:31.541" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="c41c2cdeeaa9aaa4523c29c521dd6972", element="371a5d63-db11-4dfe-befb-0fef5c089af2")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:31.541" endtime="20220713 16:19:31.541"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:31.566" level="INFO">${myRunTimeLinks} = Home</msg>
+<status status="PASS" starttime="20220713 16:19:31.541" endtime="20220713 16:19:31.566"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:31.567" endtime="20220713 16:19:31.567"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220713 16:19:31.568" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220713 16:19:31.568" endtime="20220713 16:19:31.569"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.541" endtime="20220713 16:19:31.569"/>
+</iter>
+<status status="PASS" starttime="20220713 16:19:31.259" endtime="20220713 16:19:31.569"/>
+</for>
+<kw name="CloseBrowser" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:31.570" endtime="20220713 16:19:33.869"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:31.569" endtime="20220713 16:19:33.869"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:22.923" endtime="20220713 16:19:33.869"/>
+</test>
+<status status="PASS" starttime="20220713 16:19:11.015" endtime="20220713 16:19:33.869"/>
+</suite>
+<suite id="s1-s5" name="TestSuiteSetup" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\TestSuiteSetup.robot">
+<kw name="LaunchBrowser" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://techedtrainings.com/contact/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:23.293" level="INFO">Opening browser 'Chrome' to base url 'https://techedtrainings.com/contact/'.</msg>
+<status status="PASS" starttime="20220713 16:19:23.293" endtime="20220713 16:19:29.457"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:29.457" endtime="20220713 16:19:29.673"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:23.277" endtime="20220713 16:19:29.673"/>
+</kw>
+<test id="s1-s5-t1" name="Print_All_Links_TC_01" line="9">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${allLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.708" level="INFO">${allLinks} = 27</msg>
+<status status="PASS" starttime="20220713 16:19:29.676" endtime="20220713 16:19:29.708"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${allLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.708" endtime="20220713 16:19:29.709"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${allLinks}==27</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.710" endtime="20220713 16:19:29.711"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${printLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.752" level="INFO">${printLinks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220713 16:19:29.711" endtime="20220713 16:19:29.752"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{printLinks}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.755" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.754" endtime="20220713 16:19:29.755"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.801" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.755" endtime="20220713 16:19:29.801"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.802" endtime="20220713 16:19:29.803"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.803" endtime="20220713 16:19:29.804"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.753" endtime="20220713 16:19:29.804"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3444efae-4d50-4a6f-8d3f-f0c701e8533c")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.806" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3444efae-4d50-4a6f-8d3f-f0c701e8533c")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.805" endtime="20220713 16:19:29.806"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.833" level="INFO">${myRunTimeLinks} = HOME</msg>
+<status status="PASS" starttime="20220713 16:19:29.807" endtime="20220713 16:19:29.834"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.834" endtime="20220713 16:19:29.835"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.836" endtime="20220713 16:19:29.840"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.805" endtime="20220713 16:19:29.840"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="27a3821f-deb2-4898-b64f-8a1e6caa84cd")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.842" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="27a3821f-deb2-4898-b64f-8a1e6caa84cd")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.841" endtime="20220713 16:19:29.842"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.881" level="INFO">${myRunTimeLinks} = COURSES</msg>
+<status status="PASS" starttime="20220713 16:19:29.843" endtime="20220713 16:19:29.881"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.882" endtime="20220713 16:19:29.883"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.883" endtime="20220713 16:19:29.884"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.840" endtime="20220713 16:19:29.885"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="d6aac97a-cf9d-4279-9220-c4958d2be5a5")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.887" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="d6aac97a-cf9d-4279-9220-c4958d2be5a5")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.886" endtime="20220713 16:19:29.887"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.912" level="INFO">${myRunTimeLinks} = CORPORATE TRAINING</msg>
+<status status="PASS" starttime="20220713 16:19:29.887" endtime="20220713 16:19:29.912"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.913" endtime="20220713 16:19:29.914"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.915" endtime="20220713 16:19:29.916"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.885" endtime="20220713 16:19:29.916"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="6abdf578-1ee8-4ee9-9f9b-4976606383bb")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.918" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="6abdf578-1ee8-4ee9-9f9b-4976606383bb")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.917" endtime="20220713 16:19:29.918"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.935" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.919" endtime="20220713 16:19:29.935"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.936" endtime="20220713 16:19:29.937"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.937" endtime="20220713 16:19:29.938"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.917" endtime="20220713 16:19:29.938"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="edfcd39a-b786-4bbc-ab4b-f4a42c178ae5")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.940" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="edfcd39a-b786-4bbc-ab4b-f4a42c178ae5")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.939" endtime="20220713 16:19:29.940"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.955" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.940" endtime="20220713 16:19:29.955"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.955" endtime="20220713 16:19:29.956"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.956" endtime="20220713 16:19:29.956"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.939" endtime="20220713 16:19:29.957"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="0837d598-46c9-4312-988c-8395c18a9e5b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.958" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="0837d598-46c9-4312-988c-8395c18a9e5b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.957" endtime="20220713 16:19:29.958"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.973" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.958" endtime="20220713 16:19:29.973"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.973" endtime="20220713 16:19:29.974"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.974" endtime="20220713 16:19:29.975"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.957" endtime="20220713 16:19:29.976"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="decc6323-c57d-458e-8ca0-b9705cbbf1fd")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.977" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="decc6323-c57d-458e-8ca0-b9705cbbf1fd")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.977" endtime="20220713 16:19:29.978"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:29.993" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.978" endtime="20220713 16:19:29.993"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:29.993" endtime="20220713 16:19:29.994"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:29.995" endtime="20220713 16:19:29.996"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.976" endtime="20220713 16:19:29.996"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="ba8372d0-27d8-468a-82e0-078c800a54c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:29.999" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="ba8372d0-27d8-468a-82e0-078c800a54c3")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:29.998" endtime="20220713 16:19:29.999"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.016" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:29.999" endtime="20220713 16:19:30.017"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.017" endtime="20220713 16:19:30.018"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.019" endtime="20220713 16:19:30.020"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:29.997" endtime="20220713 16:19:30.020"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="42bc6081-f8ea-42ea-803b-697fef6edc0f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.022" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="42bc6081-f8ea-42ea-803b-697fef6edc0f")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.021" endtime="20220713 16:19:30.022"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.041" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.023" endtime="20220713 16:19:30.041"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.042" endtime="20220713 16:19:30.043"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.043" endtime="20220713 16:19:30.045"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.021" endtime="20220713 16:19:30.045"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="a3795ae9-3bd7-41f7-8685-4b1a4aa1cc68")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.047" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="a3795ae9-3bd7-41f7-8685-4b1a4aa1cc68")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.046" endtime="20220713 16:19:30.047"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.067" level="INFO">${myRunTimeLinks} = ABOUT</msg>
+<status status="PASS" starttime="20220713 16:19:30.048" endtime="20220713 16:19:30.067"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.067" endtime="20220713 16:19:30.068"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.068" endtime="20220713 16:19:30.070"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.045" endtime="20220713 16:19:30.070"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3222b458-c078-40b2-88cb-bbfd1576fc6b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.071" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3222b458-c078-40b2-88cb-bbfd1576fc6b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.071" endtime="20220713 16:19:30.071"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.089" level="INFO">${myRunTimeLinks} = CONTACT</msg>
+<status status="PASS" starttime="20220713 16:19:30.072" endtime="20220713 16:19:30.089"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.089" endtime="20220713 16:19:30.090"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.091" endtime="20220713 16:19:30.092"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.070" endtime="20220713 16:19:30.092"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="95e37512-0ebd-4cda-9ee4-664579cdbe2b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.094" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="95e37512-0ebd-4cda-9ee4-664579cdbe2b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.093" endtime="20220713 16:19:30.094"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.113" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.095" endtime="20220713 16:19:30.113"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.113" endtime="20220713 16:19:30.115"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.115" endtime="20220713 16:19:30.116"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.093" endtime="20220713 16:19:30.117"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="c8b2a003-6581-4312-ae36-6fd6aaede4a7")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.118" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="c8b2a003-6581-4312-ae36-6fd6aaede4a7")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.118" endtime="20220713 16:19:30.119"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.137" level="INFO">${myRunTimeLinks} = Home</msg>
+<status status="PASS" starttime="20220713 16:19:30.119" endtime="20220713 16:19:30.137"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.137" endtime="20220713 16:19:30.138"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220713 16:19:30.139" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220713 16:19:30.138" endtime="20220713 16:19:30.140"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.117" endtime="20220713 16:19:30.140"/>
+</iter>
+<status status="PASS" starttime="20220713 16:19:29.753" endtime="20220713 16:19:30.141"/>
+</for>
+<status status="PASS" starttime="20220713 16:19:29.674" endtime="20220713 16:19:30.141"/>
+</test>
+<test id="s1-s5-t2" name="Print_All_Links_TC_02" line="29">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${allLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.153" level="INFO">${allLinks} = 27</msg>
+<status status="PASS" starttime="20220713 16:19:30.142" endtime="20220713 16:19:30.153"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${allLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.153" endtime="20220713 16:19:30.154"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${allLinks}==27</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.154" endtime="20220713 16:19:30.155"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${printLinks}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.167" level="INFO">${printLinks} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220713 16:19:30.156" endtime="20220713 16:19:30.168"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{printLinks}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.170" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="9777517f-d8a3-453b-b743-c044470074f6")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.169" endtime="20220713 16:19:30.170"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.184" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.171" endtime="20220713 16:19:30.184"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.185" endtime="20220713 16:19:30.186"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.187" endtime="20220713 16:19:30.188"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.169" endtime="20220713 16:19:30.188"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3444efae-4d50-4a6f-8d3f-f0c701e8533c")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.190" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3444efae-4d50-4a6f-8d3f-f0c701e8533c")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.189" endtime="20220713 16:19:30.190"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.202" level="INFO">${myRunTimeLinks} = HOME</msg>
+<status status="PASS" starttime="20220713 16:19:30.190" endtime="20220713 16:19:30.202"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.202" endtime="20220713 16:19:30.203"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.203" endtime="20220713 16:19:30.204"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.189" endtime="20220713 16:19:30.205"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="27a3821f-deb2-4898-b64f-8a1e6caa84cd")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.207" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="27a3821f-deb2-4898-b64f-8a1e6caa84cd")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.206" endtime="20220713 16:19:30.207"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.234" level="INFO">${myRunTimeLinks} = COURSES</msg>
+<status status="PASS" starttime="20220713 16:19:30.207" endtime="20220713 16:19:30.234"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.234" endtime="20220713 16:19:30.235"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.236" endtime="20220713 16:19:30.237"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.205" endtime="20220713 16:19:30.237"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="d6aac97a-cf9d-4279-9220-c4958d2be5a5")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.239" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="d6aac97a-cf9d-4279-9220-c4958d2be5a5")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.238" endtime="20220713 16:19:30.239"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.253" level="INFO">${myRunTimeLinks} = CORPORATE TRAINING</msg>
+<status status="PASS" starttime="20220713 16:19:30.240" endtime="20220713 16:19:30.254"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.255" endtime="20220713 16:19:30.256"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.256" endtime="20220713 16:19:30.258"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.238" endtime="20220713 16:19:30.258"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="6abdf578-1ee8-4ee9-9f9b-4976606383bb")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.261" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="6abdf578-1ee8-4ee9-9f9b-4976606383bb")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.260" endtime="20220713 16:19:30.261"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.279" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.261" endtime="20220713 16:19:30.279"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.279" endtime="20220713 16:19:30.280"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.281" endtime="20220713 16:19:30.282"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.259" endtime="20220713 16:19:30.282"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="edfcd39a-b786-4bbc-ab4b-f4a42c178ae5")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.284" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="edfcd39a-b786-4bbc-ab4b-f4a42c178ae5")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.283" endtime="20220713 16:19:30.285"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.297" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.285" endtime="20220713 16:19:30.297"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.298" endtime="20220713 16:19:30.299"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.299" endtime="20220713 16:19:30.301"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.283" endtime="20220713 16:19:30.301"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="0837d598-46c9-4312-988c-8395c18a9e5b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.303" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="0837d598-46c9-4312-988c-8395c18a9e5b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.302" endtime="20220713 16:19:30.303"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.313" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.303" endtime="20220713 16:19:30.313"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.314" endtime="20220713 16:19:30.314"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.315" endtime="20220713 16:19:30.316"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.301" endtime="20220713 16:19:30.316"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="decc6323-c57d-458e-8ca0-b9705cbbf1fd")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.317" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="decc6323-c57d-458e-8ca0-b9705cbbf1fd")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.317" endtime="20220713 16:19:30.318"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.327" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.318" endtime="20220713 16:19:30.327"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.327" endtime="20220713 16:19:30.328"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.329" endtime="20220713 16:19:30.330"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.316" endtime="20220713 16:19:30.331"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="ba8372d0-27d8-468a-82e0-078c800a54c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.332" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="ba8372d0-27d8-468a-82e0-078c800a54c3")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.331" endtime="20220713 16:19:30.332"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.343" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.333" endtime="20220713 16:19:30.344"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.344" endtime="20220713 16:19:30.345"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.346" endtime="20220713 16:19:30.347"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.331" endtime="20220713 16:19:30.347"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="42bc6081-f8ea-42ea-803b-697fef6edc0f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.349" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="42bc6081-f8ea-42ea-803b-697fef6edc0f")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.349" endtime="20220713 16:19:30.350"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.360" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.350" endtime="20220713 16:19:30.361"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.361" endtime="20220713 16:19:30.362"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.363" endtime="20220713 16:19:30.364"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.348" endtime="20220713 16:19:30.364"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="a3795ae9-3bd7-41f7-8685-4b1a4aa1cc68")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.366" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="a3795ae9-3bd7-41f7-8685-4b1a4aa1cc68")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.365" endtime="20220713 16:19:30.366"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.375" level="INFO">${myRunTimeLinks} = ABOUT</msg>
+<status status="PASS" starttime="20220713 16:19:30.367" endtime="20220713 16:19:30.375"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.376" endtime="20220713 16:19:30.376"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.377" endtime="20220713 16:19:30.377"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.365" endtime="20220713 16:19:30.378"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3222b458-c078-40b2-88cb-bbfd1576fc6b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.380" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="3222b458-c078-40b2-88cb-bbfd1576fc6b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.379" endtime="20220713 16:19:30.380"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.391" level="INFO">${myRunTimeLinks} = CONTACT</msg>
+<status status="PASS" starttime="20220713 16:19:30.380" endtime="20220713 16:19:30.392"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.392" endtime="20220713 16:19:30.393"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.393" endtime="20220713 16:19:30.394"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.378" endtime="20220713 16:19:30.394"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="95e37512-0ebd-4cda-9ee4-664579cdbe2b")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.396" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="95e37512-0ebd-4cda-9ee4-664579cdbe2b")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.395" endtime="20220713 16:19:30.396"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.407" level="INFO">${myRunTimeLinks} = </msg>
+<status status="PASS" starttime="20220713 16:19:30.396" endtime="20220713 16:19:30.407"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.408" endtime="20220713 16:19:30.408"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220713 16:19:30.409" endtime="20220713 16:19:30.410"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.394" endtime="20220713 16:19:30.410"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="c8b2a003-6581-4312-ae36-6fd6aaede4a7")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220713 16:19:30.412" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="406086ffdf87984b7926b2d00202dcc7", element="c8b2a003-6581-4312-ae36-6fd6aaede4a7")&gt;</msg>
+<status status="PASS" starttime="20220713 16:19:30.411" endtime="20220713 16:19:30.412"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${myRunTimeLinks}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220713 16:19:30.422" level="INFO">${myRunTimeLinks} = Home</msg>
+<status status="PASS" starttime="20220713 16:19:30.412" endtime="20220713 16:19:30.422"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${myRunTimeLinks}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220713 16:19:30.423" endtime="20220713 16:19:30.423"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${myRunTimeLinks}"""=="""${linktestPrintValidate}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220713 16:19:30.425" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220713 16:19:30.424" endtime="20220713 16:19:30.425"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.410" endtime="20220713 16:19:30.425"/>
+</iter>
+<status status="PASS" starttime="20220713 16:19:30.168" endtime="20220713 16:19:30.426"/>
+</for>
+<status status="PASS" starttime="20220713 16:19:30.142" endtime="20220713 16:19:30.426"/>
+</test>
+<kw name="CloseBrowser" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:30.430" endtime="20220713 16:19:32.929"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:30.429" endtime="20220713 16:19:32.929"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:22.939" endtime="20220713 16:19:32.929"/>
+</suite>
+<suite id="s1-s6" name="UploadFileInRobot" source="D:\PythonExcersiseFiles\Day1PythonProgramming\Day8\UploadFileInRobot.robot">
+<test id="s1-s6-t1" name="SS:01" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/upload</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 16:19:34.286" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/upload'.</msg>
+<status status="PASS" starttime="20220713 16:19:34.286" endtime="20220713 16:19:47.540"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 16:19:47.541" endtime="20220713 16:19:47.680"/>
+</kw>
+<kw name="My Image Path" library="Reusable">
+<var>${fileName}</var>
+<arg>selenium-screenshot-1.png</arg>
+<msg timestamp="20220713 16:19:47.680" level="INFO">${fileName} = D:\PythonExcersiseFiles\Day1PythonProgramming/selenium-screenshot-1.png</msg>
+<status status="PASS" starttime="20220713 16:19:47.680" endtime="20220713 16:19:47.680"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>file-upload</arg>
+<arg>${fileName}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220713 16:19:47.680" level="INFO">Sending D:\PythonExcersiseFiles\Day1PythonProgramming\selenium-screenshot-1.png to browser.</msg>
+<status status="PASS" starttime="20220713 16:19:47.680" endtime="20220713 16:19:47.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220713 16:19:49.739" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220713 16:19:47.735" endtime="20220713 16:19:49.739"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 16:19:49.739" endtime="20220713 16:19:52.159"/>
+</kw>
+<status status="PASS" starttime="20220713 16:19:34.286" endtime="20220713 16:19:52.159"/>
+</test>
+<status status="PASS" starttime="20220713 16:19:33.931" endtime="20220713 16:19:52.159"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 6 executions.</doc>
+<status status="PASS" starttime="20220713 16:18:54.084" endtime="20220713 16:19:52.166"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="6" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="RunByTag &amp; RunByTag S1">RunByTag &amp; RunByTag S1</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="RunByTag">RunByTag &amp; RunByTag S1.RunByTag</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s2" name="RunByTag S1">RunByTag &amp; RunByTag S1.RunByTag S1</stat>
+<stat pass="8" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="CheckBox">Suites.CheckBox</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="HTMLTable">Suites.HTMLTable</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="RadioButton">Suites.RadioButton</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s4" name="SetUpAndTearDownBrowsers">Suites.SetUpAndTearDownBrowsers</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s5" name="TestSuiteSetup">Suites.TestSuiteSetup</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="UploadFileInRobot">Suites.UploadFileInRobot</stat>
 </suite>
 </statistics>
 <errors>

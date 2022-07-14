@@ -8,6 +8,11 @@ def readXMLTestData(nodeName):
     return  data.firstChild.data
 
 
+def myImagePath(imageName):
+
+    myXmlDoc = str(Path(__file__).parent.parent)+"/"+imageName+""
+    return  myXmlDoc
+
 
 
 
