@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
+#   Docker commit to testing branch
 ${testUrl}      https://www.docker.com/
 ${browser}      Chrome
 ${gettingStartedURL}        https://www.docker.com/get-started/
